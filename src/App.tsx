@@ -2,15 +2,13 @@ import * as React from "react"
 import {
   ChakraProvider,
   Box,
-  Text,
   Link,
   VStack,
-  Code,
   Grid,
   theme,
 } from "@chakra-ui/react"
 import { ColorModeSwitcher } from "./ColorModeSwitcher"
-import { Logo } from "./Logo"
+import Form from "./Form";
 
 export const App = () => (
   <ChakraProvider theme={theme}>
@@ -18,10 +16,7 @@ export const App = () => (
       <Grid minH="100vh" p={3}>
         <ColorModeSwitcher justifySelf="flex-end" />
         <VStack spacing={8}>
-          <Logo h="40vmin" pointerEvents="none" />
-          <Text>
-            Edit <Code fontSize="xl">src/App.tsx</Code> and save to reload.
-          </Text>
+         
           <Link
             color="teal.500"
             href="https://chakra-ui.com"
@@ -29,10 +24,15 @@ export const App = () => (
             target="_blank"
             rel="noopener noreferrer"
           >
-            Learn Chakra
+            THIS IS A LINK COMPONENT WORKING
           </Link>
+          <h1>FORM COMPONENT</h1>
+          <Form/>
         </VStack>
       </Grid>
+      
     </Box>
+  
+   
   </ChakraProvider>
 )
